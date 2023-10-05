@@ -2,30 +2,35 @@
 module.exports.home = (req, res) => {
     // It renders the "index" template and sets the title to "Ayomide's Portfolio Website."
     res.render('index', {
-        title: "Ayomide's Portfolio Website"
+        title: 'Home',
+        currentPage: 'Index'
     });
 }
 
 module.exports.about = (req, res) => {
     res.render('about', {
-        title: "About"
+        title: "About",
+        currentPage: 'About'
     });
 }
 
 module.exports.projects = (req, res) => {
     res.render('projects', {
-        title: "Projects"
+        title: "Projects",
+        currentPage: 'Projects'
     });
 }
 
 module.exports.services = (req, res) => {
     res.render('services', {
-        title: "Services"
+        title: "Services",
+        currentPage: 'Services'
     });
 }
 
 module.exports.contact = (req, res) => {
     res.render('contact', {
-        title: "Contact"
+        title: "Contact",
+        currentPage: 'Contact'
     });
 }
