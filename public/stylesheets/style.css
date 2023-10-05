@@ -1,38 +1,170 @@
-body {
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #f4f4f4;
+/* General Styles */
+
+/* Resetting margins and padding to eliminate potential white space */
+html, body {
   margin: 0;
   padding: 0;
 }
 
-.custom-navbar {
-  background-color: #333;
-  padding: 20px 0;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0b192f; /* Dark background color */
 }
 
-.navbar-brand .logo {
-  width: 50px;
-  height: 50px;
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
-  background-color: #555;
-}
-
-.custom-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: absolute;
+.footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
+  text-align: center;
 }
+
+.logo {
+  width: 50px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #0b192f; /* Dark background color */
+  padding: 0.5rem 1rem; /* Added padding for spacing */
+  /* margin-top: -3.3rem; */
+  margin: 0; /* Ensure no margin on navbar */
+}
+
+.navbar .nav-link {
+  color: #ccd6f7; /* Link color */
+  margin-right: 1rem; /* Added margin for spacing between links */
+}
+
+.navbar .nav-link:hover {
+  color: #64ffda; /* Hover color same as button color */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    padding: 1rem; /* Reduced padding for less height */
+    margin-right: 1rem; /* Existing margin for spacing between links */
+    color: #ccd6f7; /* Link color */
+}
+
+.navbar .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #64ffda;  /* Color of line, same as button color */
+  transition: width 0.3s;  /* Animation to make line grow/shrink */
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;  /* Full width line on hover */
+}
+
+.navbar .nav-item.active .nav-link::after {
+  width: 100%;  /* Full width line for active link */
+  color: #64ffda
+}
+.navbar .nav-item:active, .navbar .nav-item:focus{
+  color: #64ffda;
+}
+
+
+
+/* Intro Section Styles */
+.intro {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Changed from flex-end to flex-start for left alignment */
+  justify-content: center;
+  padding-left: 13%;  /* Changed from padding-right to padding-left for left alignment */
+  color: #ccd6f7;  /* Light text color */
+  margin-top: -6rem;
+}
+
+.intro h1 {
+  font-size: 1.25rem;
+  /* text-transform: lowercase; */
+  margin: 0;
+  color: #64ffda;  /* Changed color to match the button color */
+}
+
+.intro .name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ccd6f7;
+}
+
+.intro .lead {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #8892af;
+}
+
+.intro p {
+  color: #aab4be; /* Dull color */
+  margin-top: 1rem;
+  max-width: 600px;  /* Added max-width to prevent text extending too far */
+  font-size: 1.25rem;
+}
+
+.btn-outline {
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  padding: .7rem 2.5rem;  /* Adjusted padding for more width and less height */
+  margin-top: 2rem;  /* Added margin */
+}
+
+.btn-outline:hover {
+  background-color: #64ffda;
+  color: #0b192f;
+}
+
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b192f; /* Dark background color */
+  padding: 1rem;
+}
+
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccd6f7;
+  margin: 0 2rem;;/* Added margin to create space between the line and the icons/email */
+
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%; /* Adjust as needed to change the space between the lines, icons, and email */
+}
+
+.footer-icons, .footer-email {
+  display: flex;
+  margin: 0 5rem;
+}
+
+.text-secondary {
+  color: #ccd6f7 !important;
+}
+
+.footer-icons a {
+  margin-right: 1rem; /* Adjust margin as needed */
+  color: #ffffff;
+  font-size: 12px;
+}
+.footer-email p {
+  margin: 0; /* Reset margin */
+  font-size: 0.9rem; /* Adjust font size as needed */
+  letter-spacing: 0.05em; /* Adjust letter spacing */
+}
+
