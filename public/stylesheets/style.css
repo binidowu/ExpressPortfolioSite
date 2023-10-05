@@ -168,3 +168,86 @@ body {
   letter-spacing: 0.05em; /* Adjust letter spacing */
 }
 
+/* About styling */
+.about {
+  width: 70%;
+  margin: auto;
+  padding: 1rem 0 5rem 0; 
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.about-header h1 {
+  color: #ccd6f7;
+  margin-right: 2rem;
+}
+
+.header-line {
+  flex-grow: 0;
+  height: 1px;
+  background-color:#aab4be;
+  width: 30%;
+}
+
+.about-content {
+  margin-top: 3rem;
+  color: #8892b0;
+}
+
+.about-text {
+  width: 55%;
+}
+.skills {
+  margin-top: 1rem;
+}
+
+.skill-category p {
+  margin-bottom: 0.5rem;
+  
+}
+
+.skill-category p strong{
+  margin-bottom: 0.5rem;
+  color: #64ffda;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: center;
+  font-size: 13.5px;
+  gap: -1rem -1rem;
+  padding: 0px;
+  margin: 20px 0px 20px;
+
+}
+.skill-column {
+  width: 45%; 
+  padding: 0 1rem;
+}
+.text-button {
+  color: #64ffda;
+  font-size: .7rem;
+  margin-right: .35rem;
+}
+.about-image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-border {
+  border: 1.5px solid #64ffda; 
+  padding: 1rem;
+}
+
+.about-image img {
+  width: 400px;  
+  height: auto;
+  display: block;
+}
+
