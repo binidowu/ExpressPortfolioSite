@@ -3,7 +3,7 @@ module.exports.home = (req, res) => {
     // It renders the "index" template and sets the title to "Ayomide's Portfolio Website."
     res.render('index', {
         title: 'Home',
-        currentPage: 'Index'
+        currentPage: 'Home'
     });
 }
 
