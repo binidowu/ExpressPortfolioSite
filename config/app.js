@@ -1,49 +1,54 @@
+// Import necessary modules
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Import routers
 var indexRouter = require('../ayo-portfolio/routes/index');
 var usersRouter = require('../ayo-portfolio/routes/users');
 
+// Initialize the express app
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, '../ayo-portfolio/views'));
-app.set('view engine', 'ejs');
+// Set up the view engine
+app.set('views', path.join(__dirname, '../ayo-portfolio/views'));  // Define the views directory
+app.set('view engine', 'ejs');  // Set EJS as the view engine
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
+// Middleware setup
+app.use(logger('dev'));  // Use morgan for logging
+app.use(express.json());  // Parse JSON payloads
+app.use(express.urlencoded({ extended: false }));  // Parse URL-encoded payloads
+app.use(cookieParser());  // Parse cookies
+app.use(express.static(path.join(__dirname, '../public')));  // Serve static files from the public directory
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Define routes
+app.use('/', indexRouter);  // Use the index router for the root path
+app.use('/users', usersRouter);  // Use the users router for the /users path
 
+// Handle POST requests to the root path
 app.post('/', (req, res) => {
-  const formData = req.body;
+  const formData = req.body;  // Extract form data from the request body
   console.log(formData);  // Log form data to console (or do something with it)
   res.redirect('/');  // Redirect user to home page
 });
 
-// catch 404 and forward to error handler
+// Handle 404 errors (Page Not Found)
 app.use(function (req, res, next) {
-  next(createError(404));
+  next(createError(404));  // Forward to error handler with a 404 error
 });
 
-// error handler
+// General error handler
 app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
+  // Set error message and details based on environment
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  // Render the error page
+  res.status(err.status || 500);  // Use the error's status or default to 500 (Internal Server Error)
+  res.render('error');  // Render the error view
 });
 
-
-
+// Export the app for use in other modules
 module.exports = app;

@@ -1,16 +1,18 @@
 /* General Styles */
 
-/* Resetting margins and padding to eliminate potential white space */
+/* Resetting margins and padding for a clean slate */
 html, body {
   margin: 0;
   padding: 0;
 }
 
+/* Setting default font and background color for the body */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #0b192f; /* Dark background color */
+  background-color: #0b192f;
 }
 
+/* Fixed footer at the bottom of the page */
 .footer {
   position: fixed;
   bottom: 0;
@@ -18,76 +20,81 @@ body {
   text-align: center;
 }
 
+/* Logo dimensions */
 .logo {
   width: 50px;
 }
 
 /* Navbar Styles */
+
+/* Navbar background and padding */
 .navbar {
-  background-color: #0b192f; /* Dark background color */
-  padding: 0.5rem 1rem; /* Added padding for spacing */
-  /* margin-top: -3.3rem; */
-  margin: 0; /* Ensure no margin on navbar */
+  background-color: #0b192f;
+  padding: 0.5rem 1rem;
+  margin: 0;
 }
 
+/* Navbar link styles */
 .navbar .nav-link {
-  color: #ccd6f7; /* Link color */
-  margin-right: 1rem; /* Added margin for spacing between links */
+  color: #ccd6f7;
+  margin-right: 1rem;
 }
 
+/* Navbar link hover effect */
 .navbar .nav-link:hover {
-  color: #64ffda; /* Hover color same as button color */
+  color: #64ffda;
 }
 
+/* Navbar brand and link styles */
 .navbar .navbar-brand,
 .navbar .nav-link {
-    padding: 1rem; /* Reduced padding for less height */
-    margin-right: 1rem; /* Existing margin for spacing between links */
-    color: #ccd6f7; /* Link color */
+    padding: 1rem;
+    margin-right: 1rem;
+    color: #ccd6f7;
 }
 
+/* Navbar link hover underline effect */
 .navbar .nav-link::after {
   content: '';
   display: block;
   width: 0;
   height: 2px;
-  background: #64ffda;  /* Color of line, same as button color */
-  transition: width 0.3s;  /* Animation to make line grow/shrink */
+  background: #64ffda;
+  transition: width 0.3s;
 }
 
-.navbar .nav-link:hover::after {
-  width: 100%;  /* Full width line on hover */
-}
-
+.navbar .nav-link:hover::after,
 .navbar .nav-item.active .nav-link::after {
-  width: 100%;  /* Full width line for active link */
+  width: 100%;
 }
-.navbar .nav-item:active{
+
+.navbar .nav-item:active {
   color: #64ffda;
 }
 
-
-
 /* Intro Section Styles */
+
+/* Styling for the intro section */
 .intro {
   width: 70%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  /* Changed from flex-end to flex-start for left alignment */
+  align-items: flex-start;
   justify-content: center;
-  padding-left: 13%;  /* Changed from padding-right to padding-left for left alignment */
-  color: #ccd6f7;  /* Light text color */
+  padding-left: 13%;
+  color: #ccd6f7;
   margin-top: -6rem;
 }
 
+/* Intro header styles */
 .intro h1 {
   font-size: 1.25rem;
-  /* text-transform: lowercase; */
   margin: 0;
-  color: #64ffda;  /* Changed color to match the button color */
+  color: #64ffda;
 }
 
+/* Name styling in the intro section */
 .intro .name {
   font-size: 3.5rem;
   font-weight: bold;
@@ -95,6 +102,7 @@ body {
   color: #ccd6f7;
 }
 
+/* Lead text styling in the intro section */
 .intro .lead {
   font-size: 3.5rem;
   font-weight: bold;
@@ -102,18 +110,20 @@ body {
   color: #8892af;
 }
 
+/* Paragraph styling in the intro section */
 .intro p {
-  color: #aab4be; /* Dull color */
+  color: #aab4be;
   margin-top: 1rem;
-  max-width: 600px;  /* Added max-width to prevent text extending too far */
+  max-width: 600px;
   font-size: 1.25rem;
 }
 
+/* Button styling in the intro section */
 .btn-outline {
   border: 1px solid #64ffda;
   color: #64ffda;
-  padding: .7rem 2.5rem;  /* Adjusted padding for more width and less height */
-  margin-top: 2rem;  /* Added margin */
+  padding: .7rem 2.5rem;
+  margin-top: 2rem;
 }
 
 .btn-outline:hover {
@@ -121,60 +131,70 @@ body {
   color: #0b192f;
 }
 
-
 /* Footer Styles */
+
+/* Footer layout and background */
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0b192f; /* Dark background color */
+  background-color: #0b192f;
   padding: 1rem;
   z-index: 2;
 }
 
-
+/* Line styling in the footer */
 .line {
   flex-grow: 1;
   height: 1px;
   background-color: #ccd6f7;
-  margin: 0 2rem;;/* Added margin to create space between the line and the icons/email */
-
+  margin: 0 2rem;
 }
 
+/* Footer content layout */
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%; /* Adjust as needed to change the space between the lines, icons, and email */
+  width: 50%;
 }
 
+/* Footer icons and email layout */
 .footer-icons, .footer-email {
   display: flex;
   margin: 0 5rem;
 }
 
+/* Secondary text color */
 .text-secondary {
   color: #ccd6f7 !important;
 }
 
+/* Footer icon styles */
 .footer-icons a {
-  margin-right: 1rem; /* Adjust margin as needed */
+  margin-right: 1rem;
   color: #ffffff;
   font-size: 12px;
 }
+
+/* Footer email text styles */
 .footer-email p {
-  margin: 0; /* Reset margin */
-  font-size: 0.9rem; /* Adjust font size as needed */
-  letter-spacing: 0.05em; /* Adjust letter spacing */
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
-/* About styling */
+
+/* About Section Styles */
+
+/* Main container for the about section */
 .about {
   width: 70%;
   margin: auto;
   padding: 1rem 0 5rem 0; 
 }
 
+/* Header styling for the about section */
 .about-header {
   display: flex;
   align-items: center;
@@ -186,35 +206,41 @@ body {
   margin-right: 2rem;
 }
 
+/* Line styling for the about header */
 .header-line {
   flex-grow: 0;
   height: 1px;
-  background-color:#aab4be;
+  background-color: #aab4be;
   width: 30%;
 }
 
+/* Content styling for the about section */
 .about-content {
   margin-top: 3rem;
   color: #8892b0;
 }
 
+/* Text container within the about section */
 .about-text {
   width: 55%;
 }
+
+/* Skills listing */
 .skills {
   margin-top: 1rem;
 }
 
+/* Skill category styling */
 .skill-category p {
   margin-bottom: 0.5rem;
-  
 }
 
-.skill-category p strong{
+.skill-category p strong {
   margin-bottom: 0.5rem;
   color: #64ffda;
 }
 
+/* Skill list layout */
 .skill-list {
   display: flex;
   justify-content: center;
@@ -222,17 +248,22 @@ body {
   gap: -1rem -1rem;
   padding: 0px;
   margin: 20px 0px 20px;
-
 }
+
+/* Individual skill column */
 .skill-column {
   width: 45%; 
   padding: 0 1rem;
 }
+
+/* Text button styling */
 .text-button {
   color: #64ffda;
   font-size: .7rem;
   margin-right: .35rem;
 }
+
+/* Image container within the about section */
 .about-image {
   width: 40%;
   display: flex;
@@ -240,20 +271,23 @@ body {
   align-items: center;
 }
 
+/* Image border styling */
 .image-border {
   border: 1.5px solid #64ffda; 
   padding: 1rem;
 }
 
+/* Image dimensions and display */
 .about-image img {
   width: 400px;  
   height: auto;
   display: block;
 }
 
-/* project styles */
+/* Project Section Styles */
 
-.project{
+/* Main container for the project section */
+.project {
   width: 70%; 
   margin: 0 auto;    
   padding: 0 15px; 
@@ -261,6 +295,7 @@ body {
   z-index: 1;
 }
 
+/* Header styling for the project section */
 .project-header {
   display: flex;
   align-items: center;
@@ -272,12 +307,15 @@ body {
   margin-right: 2rem;
 }
 
+/* Line styling for the project header */
 .header-line {
   flex-grow: 0;
   height: 1px;
-  background-color:#aab4be;
+  background-color: #aab4be;
   width: 35%;
 }
+
+/* Grid layout for projects */
 .project-grid {
   display: flex;
   flex-direction: row;
@@ -285,6 +323,7 @@ body {
   gap: 2rem;
 }
 
+/* Individual project item styling */
 .project-item {
   display: flex;
   flex-direction: row;
@@ -297,6 +336,7 @@ body {
   margin-top: 1rem; 
 }
 
+/* Project image styling */
 .project-image {
   width: 700px;
   height: auto;
@@ -304,6 +344,7 @@ body {
   position: relative;
 }
 
+/* Tint effect for project images */
 .project-image::before {
   content: '';
   position: absolute;
@@ -312,14 +353,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: #347e7d;
-  opacity: 0.5;  /* Adjust opacity to control the intensity of the tint */
+  opacity: 0.5;
   transition: opacity 0.3s;
 }
 
 .project-image:hover::before { 
-  opacity: 0;  /* Remove tint on hover */
+  opacity: 0;
 }
 
+/* Project information styling */
 .project-info {
   width: 50%;
   padding: 2rem;
@@ -327,6 +369,7 @@ body {
   z-index: 2;
   text-align: right; 
 }
+
 .featured-project {
   color: #64ffda;
 }
@@ -345,7 +388,6 @@ body {
   width: 550px;
   margin-left: -120px;
   margin-right: 20px; 
-  
 }
 
 .project-tech-list {
@@ -364,27 +406,26 @@ body {
   margin-right: 15px;
 }
 
-
 .project-image img {
-  /* Add hover effect for image */
   transition: 0.3s;
   width: 564px;
-  height: 400px
-  /* 564 × 351; */
-  /* margin-right: -50px;  */
+  height: 400px;
 }
 
 .project-image img:hover {
   background-color: #1d4753;
 }
 
-/* Services Styles */
+/* Services Section Styles */
+
+/* Main container for the services section */
 .services {
   width: 70%;
   margin: auto;
   padding: 1rem 0 5rem 0; 
 }
 
+/* Header styling for the services section */
 .services-header {
   display: flex;
   align-items: center;
@@ -396,20 +437,14 @@ body {
   margin-right: 2rem;
 }
 
-
+/* Service container layout */
 .service-container {
   display: flex;
   width: 100%;
   margin-top: 3rem;
 }
 
-.tabs {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-}
-
+/* Tab button styles for services */
 .tab-button {
   padding: 10px 20px;
   cursor: pointer;
@@ -419,7 +454,6 @@ body {
   text-align: left;
   transition: background-color 0.3s, color 0.3s;
   width: 280px;
-  text-align: left;
 }
 
 .tab-button:hover {
@@ -432,13 +466,13 @@ body {
 
 .tab-button {
   border-left: 0.5px solid #aab4be;
-  /* ... other styles */
 }
 
 .tab-button.active {
   border-left: 2px solid #64ffda;
 }
 
+/* Panel styles for services */
 .panels {
   flex-grow: 1;
   background-color: #112240;
@@ -450,22 +484,26 @@ body {
 .panels .panel {
   display: none;
 }
+
 .panels .panel.active {
   display: block;
 }
 
+/* Contact Section Styles */
 
-/* Contact styles */
-.contact{
+/* Main container for the contact section */
+.contact {
   width: 70%;
   margin: auto;
   padding: 1rem 0 5rem 0; 
 }
 
+/* Label styling in the contact section */
 .contact label {
   color: #ccd6f7; 
 }
 
+/* Header styling for the contact section */
 .contact-header {
   display: flex;
   align-items: center;
@@ -477,6 +515,7 @@ body {
   margin-right: 2rem;
 }
 
+/* Form control styles in the contact section */
 .contact .form-control {
   background-color: transparent;
   border: none;
@@ -490,6 +529,7 @@ body {
   box-shadow: none;
 }
 
+/* Button styling in the contact section */
 .btn-outline {
   border: 1px solid #64ffda;
   color: #64ffda;

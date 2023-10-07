@@ -1,6 +1,6 @@
 // This module.exports.home function is used to handle requests to the "home" route.
 module.exports.home = (req, res) => {
-    // It renders the "index" template and sets the title to "Ayomide's Portfolio Website."
+    // It renders the "index" template and sets the title to "Home."
     res.render('index', {
         title: 'Home',
         currentPage: 'Home'
