@@ -61,9 +61,8 @@ body {
 
 .navbar .nav-item.active .nav-link::after {
   width: 100%;  /* Full width line for active link */
-  color: #64ffda
 }
-.navbar .nav-item:active, .navbar .nav-item:focus{
+.navbar .nav-item:active{
   color: #64ffda;
 }
 
@@ -377,4 +376,98 @@ body {
 
 .project-image img:hover {
   background-color: #1d4753;
+}
+
+/* Services Styles */
+.services {
+  width: 70%;
+  margin: auto;
+  padding: 1rem 0 5rem 0; 
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.services-header h1 {
+  color: #ccd6f7;
+  margin-right: 2rem;
+}
+
+
+.service-container {
+  display: flex;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #ccd6f7;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+  width: 280px;
+  text-align: left;
+}
+
+.tab-button:hover {
+  background-color: #112240;
+}
+
+.tab-button.active {
+  color: #64ffda;
+}
+
+.tab-button {
+  border-left: 0.5px solid #aab4be;
+  /* ... other styles */
+}
+
+.tab-button.active {
+  border-left: 0.5px solid #64ffda;
+}
+
+.panels {
+  flex-grow: 1;
+  background-color: #112240;
+  padding: 20px;
+  color: #ccd6f7;
+  margin-left: 15px;
+}
+
+.panels .panel {
+  display: none;
+}
+.panels .panel.active {
+  display: block;
+}
+
+
+/* Contact styles */
+.contact{
+  width: 70%;
+  margin: auto;
+  padding: 1rem 0 5rem 0; 
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-header h1 {
+  color: #ccd6f7;
+  margin-right: 2rem;
 }

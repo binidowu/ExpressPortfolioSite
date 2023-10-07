@@ -13,35 +13,51 @@
 
     <script src="javascripts/animation.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(navItem => {
+                navItem.addEventListener('click', () => {
+                    navItems.forEach(item => item.classList.remove('active'));
+                    navItem.classList.add('active');
+                });
+            });
+            const currentPage = '<%= currentPage %>';
+            const activeItem = Array.from(navItems).find(navItem => navItem.innerText.toLowerCase() === currentPage.toLowerCase());
+            if (activeItem) {
+                activeItem.classList.add('active');
+            }
+        });
+    </script>
 </head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="/">
-            <img src="images/Asquared-logos_white.png" alt="Logo" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item <% currentPage === 'Home' ? 'active' : '' %>">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item <% currentPage === 'About' ? 'active' : '' %>">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item <% currentPage === 'Projects' ? 'active' : '' %>">
-                    <a class="nav-link" href="/projects">Projects</a>
-                </li>
-                <li class="nav-item <% currentPage === 'Services' ? 'active' : '' %>s">
-                    <a class="nav-link" href="/services">Services</a>
-                </li>
-                <li class="nav-item <% currentPage === 'Contact' ? 'active' : '' %>">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img src="images/Asquared-logos_white.png" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item <% currentPage === 'Home' ? 'active' : '' %>">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item <% currentPage === 'About' ? 'active' : '' %>">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item <% currentPage === 'Projects' ? 'active' : '' %>">
+                <a class="nav-link" href="/projects">Projects</a>
+            </li>
+            <li class="nav-item <% currentPage === 'Services' ? 'active' : '' %>">
+                <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item <% currentPage === 'Contact' ? 'active' : '' %>">
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

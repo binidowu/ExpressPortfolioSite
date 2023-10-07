@@ -1,4 +1,42 @@
 <%- include('partials/header') %>
 
+    <body>
+        <section class="services">
+            <!-- Heading -->
+            <div class="services-header">
+                <h1>Services Offered</h1>
+                <div class="header-line"></div>
+            </div>
+            <div class="service-container">
+
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showService(0)">Web Development</button>
+                    <button class="tab-button" onclick="showService(1)">Mobile Application Development</button>
+                    <button class="tab-button" onclick="showService(2)">Software Design</button>
+                </div>
+                <div class="panels">
+                    <div class="panel active">
+                        <h3>Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque perspiciatis at est
+                            velit
+                            libero! Iste, ipsum quasi? Nisi, similique!</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Mobile Application Development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque perspiciatis at est
+                            velit
+                            libero! Iste, ipsum quasi? Nisi, similique!</p>
+                    </div>
+                    <div class="panel">
+                        <h3>Software Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque perspiciatis at est
+                            velit
+                            libero! Iste, ipsum quasi? Nisi, similique!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
 
     <%- include('partials/footer') %>
