@@ -461,13 +461,42 @@ body {
   padding: 1rem 0 5rem 0; 
 }
 
+.contact label {
+  color: #ccd6f7; 
+}
+
 .contact-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .contact-header h1 {
   color: #ccd6f7;
   margin-right: 2rem;
+}
+
+.contact .form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #939191;
+  border-radius: 0;
+  transition: border-color 0.3s;
+}
+
+.contact .form-control:focus {
+  border-color: #64ffda;
+  box-shadow: none;
+}
+
+.btn-outline {
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  padding: .7rem 2.5rem;
+  margin-top: 2rem;
+}
+
+.btn-outline:hover {
+  background-color: #64ffda;
+  color: #0b192f;
 }
