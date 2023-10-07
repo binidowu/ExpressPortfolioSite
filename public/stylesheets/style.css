@@ -364,13 +364,13 @@ body {
   margin-right: 15px;
 }
 
-.project-links {
-  /* styles for project links */
-}
 
 .project-image img {
   /* Add hover effect for image */
   transition: 0.3s;
+  width: 564px;
+  height: 400px
+  /* 564 × 351; */
   /* margin-right: -50px;  */
 }
 
@@ -400,6 +400,7 @@ body {
 .service-container {
   display: flex;
   width: 100%;
+  margin-top: 3rem;
 }
 
 .tabs {
@@ -435,7 +436,7 @@ body {
 }
 
 .tab-button.active {
-  border-left: 0.5px solid #64ffda;
+  border-left: 2px solid #64ffda;
 }
 
 .panels {
